@@ -12,96 +12,122 @@
             </style>
     </head>
     <body>
+      <div class="emaileric" style="margin: 0% 1%;">    
       <div class="intro text-center">
           <h1>Email Eric!</h1>
       </div>
 
-      <form class="emailform text-center">
+      <form action="./email-template.html" method="GET" class="emailform text-center" >
         
         <div class="test test-l text-center">
           <section><!-- nested flex container -->
-              <div class="small-box color4">
-                What's your name? <br>
-                <input type="text" placeholder="Litterally your name">
+              <div class="small-box-2 color4" style="padding-top: 5%;">
+                <br>
+                <h3>What's your name?</h3>
+                  <input class="form-control" type="text" placeholder="Litterally your name">
+                  <hr>
+                <h3>What's your email?</h3>
+                  <input class="form-control" type="text" placeholder="Litterally your email">
               </div>
-              <div class="small-box color3">
-                picture
+              <div class="color3 picture-box" >
+                <img src="images/dog.jpg" />
               </div>
-              <div class="small-box color1">
-                Enter a greeting <br>
-                <input type="text" placeholder="noun">
+              <div class="picture-box color1">
+                <img src="images/dog.jpg"/>
               </div>
               <div class="small-box color2">
-                How excited are you?
-                <br>
-                <input type="text" placeholder="1-10">
+                <h3>Enter a greeting</h3>
+                <input class="form-control" type="text" list="greetings" name="greeting" id="greeting">
+                <datalist id="greetings">
+                  <option value="Hello!">
+                  <option value="你好!">
+                  <option value="WAZZUP?">
+                  <option value="Salutations, Eric.">
+                </datalist>
                 
               </div>
-          </section>
+          </section> 
           <div class="big-box color4"> 
-            What brings you here? <br>
-            <input type="text" placeholder="What brings you here?">
-            <!--
-            I liked your portfolio
-            I did not like you portfolio
-            I think you are very handsome
-            -->
+            <br><br>
+            <h3>What brings you here? </h3>
+            <input class="form-control" type="text" list="reasons" name="reason" id="reason">
+            <br><br>
+            <datalist id="reasons">
+              <option value="I liked your portfolio.">
+              <option value="I did not like you portfolio.">
+              <option value="I think you are very handsome.">
+              <option value="IDK. I'm lost.">
+            </datalist>
           </div>
 
         </div>
 
           <div class="test test-r text-center">
               <div class="big-box color3">
-                What do you like? <br>
-                  <input type="text" placeholder="noun">
+                <br><br>
+                <h3>What do you like? </h3>
+                <input class="form-control" type="text" list="likes" name="like" id="like">
+                <br><br>
+                <datalist id="likes">
+                  <option value="swimming">
+                  <option value="K-pop memes">
+                  <option value="ice cream">
+                  <option value="screaming “Naruto!”">
+                </datalist>
                   <!--Swimming -Kpop memes -Screaming “Naruto!” -->
               </div>
               <section><!--nested flex container -->
-                <div class="small-box color1">
-                  picture
+                <div class="picture-box color1">
+                  <img src="images/shake.jpg" />
                 </div>
                 <div class="small-box color2">
-                  Where are you from? <br>
-                <input type="text" placeholder="noun">
-                              <!--The FBI/ Google/ Outer Space/ Massachusetts-->
+                 <h3>Where are you from?</h3>  
+                 <input class="form-control" type="text" list="froms" name="from" id="from">
+                 <datalist id="froms">
+                  <option value="the FBI">
+                  <option value="Google">
+                  <option value="outer space">
+                  <option value="Massachusetts">
+                </datalist>
 
                 </div>
                 <div class="small-box color4">
-                  Additional Links? <br>
-                  <input type="text" placeholder="noun">
+                  <h3>Additional Links?</h3>
+                  <textarea class="form-control" name="links" id="links" placeholder="portfolio, dank memes, resources, etc."></textarea>
                 </div>
-                <div class="small-box color3">
-                  picture
+                <div class="picture-box color3">
+                  <img src="images/dog.jpg"/>
                 </div>
               </section>
             </div>
 
             <div class="test test-l text-center">
               <section><!-- nested flex container -->
-                  <div class="small-box color2">
-                    picture
+                  <div class="color2 picture-box">
+                      <img src="images/blue.jpg"/>
                   </div>
                   <div class="small-box color1">
-                    Enter a signature <br>
-                    <input type="text" placeholder="noun">
+                    <h3>Enter a signature </h3>
+                    <input class="form-control" type="text" list="signatures" name="signature" id="signature">
+                    <datalist id="signatures">
+                      <option value="Best!">
+                      <option value="Ciao!">
+                      <option value="Thank you for your time!">
+                      <option value="Please don’t message me!">
+                    </datalist>
                   </div>
                   <div class="small-box color3">
-                    Email
-                    <br>
-                    <input type="text" placeholder="1-10">
+                    <h3>How excited are you?</h3>
+                    <input class="form-control" type="number" placeholder="1-10">
                   </div>
-                  <div class="small-box color4">
-                    picture
-                  </div>
+                  <div class="color4 picture-box">
+                    <img src="images/dog.jpg"/>
+                </div>
               </section>
               <div class="big-box color2"> 
-                Anything else to add? <br>
-                <input type="text" placeholder="What brings you here?">
-                <!--
-                I liked your portfolio
-                I did not like you portfolio
-                I think you are very handsome
-                -->
+                <h3>Anything else you'd like to add?</h3>
+                <textarea class="form-control" name="links" id="links" ></textarea>
+                
               </div>
           </div>
           <div class="submit-field">
@@ -117,7 +143,7 @@
           </small>
         </footer>
 
-          
+      </div>
 
     </body>
 </html>
