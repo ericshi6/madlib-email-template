@@ -1,0 +1,83 @@
+.intro {
+    background-color: #3caea3;
+
+}
+.test {
+    display: flexbox;
+}
+.emailform {
+    margin: auto;
+}
+
+.color1{
+    background-color: #20639b;
+}
+.color2{
+    background-color: #3caea3;
+
+}
+.color3{
+    background-color: #f6d55c;
+
+}
+.color4{
+    background-color: #ed553b;
+
+}
+.submit-field{
+    background-color: #20639b;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+}
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+}
+
+:-ms-input-placeholder {  
+    text-align: center; 
+}
+
+.test .big-box {
+    flex: 0 0 50%;                /* width of first flex item in main container */
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+input {
+    opacity: 1;
+}
+
+section {
+    flex: 0 0 50%;                /* width of second flex item in main container */
+    display: flex;                /* nested flex container to arrange smaller items */
+    flex-wrap: wrap;              /* make container multi-line */
+}
+section .small-box {
+    flex: 0 0 50%;                /* width of smaller items; two max per row */
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+    
+}
+@media (min-width: 783px) {
+    .test {
+        display: flex;
+    }
+}
+
+@media only screen 
+  and (max-device-width: 400px) {
+    .test {
+        display: flexbox;
+    }
+}
