@@ -69,14 +69,8 @@ h3 {
 
 .test .big-box {
     flex: 0 0 50%;                /* width of first flex item in main container */
-    padding-top: 35%;
-    padding-bottom: 10%;
-}
-
-.test .big-box {
-    flex: 0 0 50%;                /* width of first flex item in main container */
-    padding-top: 15%;
-    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 .form-control {
     opacity: 1;
@@ -95,18 +89,8 @@ section {
 section .small-box {
     flex: 0 0 50%;                /* width of smaller items; two max per row */
     width: 100%;
-    padding-top: 20%;
-    padding-bottom: 10%;
-
-    
-}
-section .small-box-2 {
-    flex: 0 0 50%;                /* width of smaller items; two max per row */
-    width: 100%;
     padding-top: 5%;
-    padding-bottom: 7%;
-
-    
+}
 }
 .picture-box {
     padding-top: 0;

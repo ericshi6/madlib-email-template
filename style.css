@@ -67,11 +67,6 @@ h3 {
     text-align: center; 
 }
 
-.test .big-box {
-    flex: 0 0 50%;                /* width of first flex item in main container */
-    padding-top: 35%;
-    padding-bottom: 10%;
-}
 
 .test .big-box {
     flex: 0 0 50%;                /* width of first flex item in main container */

@@ -14,38 +14,78 @@ function cleanAndCap (str){
 const yourName= cleanAndCap(words.get('name'));
 const emailAddress = words.get('email')
 
-const reason = words.get('reason')
-const greeting= cleanAndCap(words.get('greeting'));
-
-const like = words.get('like');
-const from = words.get('from');
-
-const links = words.get('links');
-const signature = words.get('signature');
-
-const excitement = words.get('excitement');
-const extra = words.get('extra');
-
-function hey(excitement){
-  const y = 'y';
-  const excited = y.repeat(Number(excitement));
+const reason = () => {
+ const r =  words.get('reason')
+  if(r){
+    return r;
+  } else {
+    return 'I have no reason. Existence is meaningless'
+  }
 }
 
-// The string containing HTML and text which will populate the story.html page
-const emailMessage = `
-${greeting}<br>
-I am reaching out because ${reason} <br>
-I see that we are both huge fans of ${like}. <br>
 
-<p>${yourName}</p>
-<p>${emailAddress}</p>`;
+const greeting= cleanAndCap(words.get('greeting'));
+
+const like = () => {
+  const l =  words.get('like')
+   if(l){
+     return l;
+   } else {
+     return 'nothing'
+   }
+ }
+ 
+ const from = () => {
+  const f =  words.get('from')
+   if(f){
+     return f;
+   } else {
+     return 'NONE OF YOU BUSINESS'
+   }
+ }
+ const links = () => {
+  const link =  words.get('link')
+   if(link){
+     return `Please check out some of my links: \n ${link}\n`;
+   } else {
+     return 'I would love to connect!';
+   }
+ }
+const signature = words.get('signature');
+
+const excitement = () => {
+  const add = 'y'.repeat(Number(words.get('excitement')));
+  const base = 'He'
+  return base + add +"!";
+}
+const extra = () => {
+  if (words.get('extra')){
+    return `P.S ${words.get('extra')}`;
+  } else {
+    return '';
+  }
+}
+const emailMessage = 
+`${greeting}
+
+${excitement()}
+
+My name is ${yourName} and I am from ${from()}.
+
+I am reaching out because ${reason()}. It's pretty cool that we are both huge fans of ${like()}.
+
+${links()}
+
+${signature}
+
+${yourName}
+${emailAddress}
+
+
+${extra()}
+`;
 
 // Grabbing the story element
 const emailTemplate = document.getElementById('emailTemplate');
 // Populating the story element with the value of the story variable
 emailTemplate.innerHTML = emailMessage;
-
-// Grabbing the moral-message element
-const extraMessage = document.getElementById('extra-message');
-// Populating the moral-message element with text
-extraMessage.innerHTML = `<span class="italics" title="id: message">"${extra}"</span>`;
