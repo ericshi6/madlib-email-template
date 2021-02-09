@@ -40,7 +40,7 @@ const like = () => {
    if(f){
      return f;
    } else {
-     return 'NONE OF YOU BUSINESS'
+     return 'NONE OF YOUR BUSINESS'
    }
  }
  const links = () => {
