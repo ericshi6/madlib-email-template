@@ -134,12 +134,11 @@ section .small-box-2 {
 
 }
 
-/*if the width is greater than 1177, we switch to flex (horizontal line)*/
-@media (min-width: 1177px) {
-    .test {
-        display: flex;
-    }
-    .emaileric {
-        margin: 0% 100px;
-    }
+.submit-field  p {
+    color: #fff;
 }
+.submit-field  p a {
+    color: #efca08;
+    font-weight: bold;
+}
+
