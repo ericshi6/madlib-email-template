@@ -8,47 +8,44 @@ function cleanAndCap (str){
   return temp[0].toUpperCase() + temp.substring(1)
 }
 
+//name=&email=&greeting=&reason=&like=&from=&links=&signature=&excitement=&extra=
+
 // Assigning the variables with values used in the story
-const firstAnimal= cleanAndCap(words.get('animal-1'));
-const secondAnimal = cleanAndCap(words.get('animal-2'));
+const yourName= cleanAndCap(words.get('name'));
+const emailAddress = words.get('email')
 
-const answer = cleanAndCap(words.get('answer'));
-const conjunction = answer === 'Yes' ? 'and' : 'but';
+const reason = words.get('reason')
+const greeting= cleanAndCap(words.get('greeting'));
 
-const speed = words.get('speed');
-const adj1 = words.get('adj-1');
+const like = words.get('like');
+const from = words.get('from');
 
-const thirdAnimal = cleanAndCap(words.get('animal-3'));
-const quote = words.get('quote');
+const links = words.get('links');
+const signature = words.get('signature');
 
-const verb1 = words.get('verb-1');
-const num1 = words.get('num-1');
-const message = words.get('message');
+const excitement = words.get('excitement');
+const extra = words.get('extra');
+
+function hey(excitement){
+  const y = 'y';
+  const excited = y.repeat(Number(excitement));
+}
 
 // The string containing HTML and text which will populate the story.html page
-const story = `<p>A <span class="word" title="id: animal-1">${firstAnimal}</span> was making fun of the <span class="word" title="id: animal-2">${secondAnimal}</span> one day for being so slow.</p>
+const emailMessage = `
+${greeting}<br>
+I am reaching out because ${reason} <br>
+I see that we are both huge fans of ${like}. <br>
 
-<p>"Do you ever get anywhere?" he asked with a mocking laugh.</p>
-
-<p>"<span class="word" title="id: answer">${answer}</span>," replied the <span class="word" title="id: animal-2">${secondAnimal}</span>, "${conjunction} I get there <span class="word" title="id: speed">${speed}</span> than you think. I'll run you a race and prove it."</p>
-
-<p>The <span class="word" title="id: animal-1">${firstAnimal}</span> was much <span class="word" title="id: adj-1">${adj1}</span> at the idea of running a race with the <span class="word" title="id: animal-2">${secondAnimal}</span>, but for the fun of the thing he agreed. So the <span class="word" title="id: animal-3">${thirdAnimal}</span>, who had consented to act as judge, marked the distance yelled, "<span class="word" title="id: quote">${quote}</span>".</p>
-
-<p>The <span class="word" title="id: animal-1">${firstAnimal}</span> was soon far out of sight, and to make the <span class="word" title="id: animal-2">${secondAnimal}</span> feel very deeply how ridiculous it was for him to try a race with a <span class="word" title="id: animal-1">${firstAnimal}</span>, he went off the course to practice <span class="word" title="id: verb-1">${verb1}</span> for <span class="word" title="id: num-1">${num1}</span> hours until the <span class="word" title="id: animal-2">${secondAnimal}</span> should catch up.</p>
-
-<p>The <span class="word" title="id: animal-2">${secondAnimal}</span> meanwhile kept going slowly but steadily, and, after a time, passed the place where the <span class="word" title="animal-1">${firstAnimal}</span> was <span class="word" title="id: verb-1">${verb1}</span>. The <span class="word" title="id: animal-1">${firstAnimal}</span> was so caught up in <span class="word" title="id: verb-1">${verb1}</span>; and when at last he did stop, the <span class="word" title="id: animal-2">${secondAnimal}</span> was near the goal. The <span class="word" title="id: animal-1">${firstAnimal}</span> now ran his swiftest, but he could not overtake the <span class="word" title="id: animal-2">${secondAnimal}</span> in time.</p>`;
-
-// Grabbing the title element
-const title = document.getElementById('title');
-// Populating the title element with text
-title.innerHTML = `The <span class="word" title="id: animal-1">${firstAnimal}</span> And The  <span class="word" title="id: animal-2">${secondAnimal}</span>`;
+<p>${yourName}</p>
+<p>${emailAddress}</p>`;
 
 // Grabbing the story element
-const storyEl = document.getElementById('story');
+const emailTemplate = document.getElementById('emailTemplate');
 // Populating the story element with the value of the story variable
-storyEl.innerHTML = story;
+emailTemplate.innerHTML = emailMessage;
 
 // Grabbing the moral-message element
-const moralMessage = document.getElementById('moral-message');
+const extraMessage = document.getElementById('extra-message');
 // Populating the moral-message element with text
-moralMessage.innerHTML = `<span class="italics" title="id: message">"${message}"</span>`;
+extraMessage.innerHTML = `<span class="italics" title="id: message">"${extra}"</span>`;
