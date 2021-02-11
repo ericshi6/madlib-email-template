@@ -44,9 +44,9 @@ const like = () => {
    }
  }
  const links = () => {
-  const link =  words.get('link')
+  const link =  words.get('links')
    if(link){
-     return `Please check out some of my links: \n ${link}\n`;
+     return `Please check out some of my links: \n ${link}`;
    } else {
      return 'I would love to connect!';
    }
