@@ -4,6 +4,9 @@
     padding-top: 10px;
 
 }
+/* .form-control{
+    text-align: center;
+} */
 h1 {
     color: #fff;
 }
@@ -136,5 +139,8 @@ section .small-box-2 {
     }
     .emaileric {
         margin: 0% 100px;
+    }
+    .form-control{
+        text-align: left;
     }
 }
